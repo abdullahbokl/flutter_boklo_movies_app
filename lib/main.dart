@@ -36,7 +36,7 @@ void main() async {
 List<SingleChildWidget> _providers() {
   return [
     BlocProvider<AuthenticationBloc>(
-      create: (_) => AuthenticationBloc(getIt()),
+      create: (_) => getIt<AuthenticationBloc>(),
     ),
     BlocProvider<HomeCubit>(
       create: (_) => HomeCubit()..fetchData(),

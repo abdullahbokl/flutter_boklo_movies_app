@@ -16,7 +16,7 @@ class CustomButton extends StatelessWidget {
     required this.func,
     required this.title,
     this.fontSize = 12,
-    this.color = AppColors.green,
+    this.color = AppColors.primary,
     this.shape = const StadiumBorder(),
   }) : super(key: key);
 

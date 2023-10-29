@@ -10,7 +10,7 @@ class CustomBackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         decoration: const BoxDecoration(
-            color: AppColors.green,
+            color: AppColors.primary,
             borderRadius: BorderRadius.only(
               topRight: Radius.circular(20),
             )),

@@ -6,8 +6,8 @@ import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/service_locator.dart';
 import '../../../blocs/search_movies/search_movie_bloc.dart';
 import '../../widgets/custom_indicator.dart';
-import 'search_results_list.dart';
 import 'widgets/search_error_widget.dart';
+import 'widgets/search_results_list.dart';
 
 class SearchScreenBody extends StatelessWidget {
   const SearchScreenBody({

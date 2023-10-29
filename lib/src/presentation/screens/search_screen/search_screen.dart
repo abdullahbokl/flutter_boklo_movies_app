@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-import '../screen_layout/screen_layout.dart';
+import '../../../../core/shared/widgets/screen_layout.dart';
 import 'search_screen_body.dart';
 import 'widgets/search_bar.dart';
 

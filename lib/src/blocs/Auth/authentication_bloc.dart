@@ -11,27 +11,38 @@ class AuthenticationBloc
     extends Bloc<AuthenticationEvent, AuthenticationState> {
   final AuthService _authService;
 
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
+  bool isLoginScreen = true;
+  late AnimationController animationController;
+  late Animation<double> rotationAnimation;
+
   AuthenticationBloc(this._authService) : super(AuthenticationInitial()) {
     on<EmailRegisterAuthEvent>((event, emit) async {
-      return await _emailRegisterAuth(emit, event);
+      await _emailRegisterAuth(emit, event);
     });
 
     on<EmailSignInAuthEvent>(
       (event, emit) async {
-        return await _emailSignInAuth(emit, event);
+        await _emailSignInAuth(emit, event);
       },
     );
 
-    on<AnounymousAuthEvent>((event, emit) async {
-      return await _anonymousAuth(emit);
+    on<AnonymousAuthEvent>((event, emit) async {
+      await _anonymousAuth(emit);
     });
 
     on<GoogleAuthEvent>((event, emit) async {
-      return await _googleAuth(emit);
+      await _googleAuth(emit);
     });
 
     on<SignOutEvent>((event, emit) async {
-      return await _signOut(emit);
+      await _signOut(emit);
+    });
+
+    on<SwitchAuthEvent>((event, emit) async {
+      _switchAuth(emit);
     });
   }
 
@@ -42,8 +53,8 @@ class AuthenticationBloc
     emit(AuthLoadingState());
     try {
       await _authService.signUpWithEmail(
-        email: event.email,
-        password: event.password,
+        email: emailController.text,
+        password: passController.text,
       );
       emit(AuthSuccessState());
     } catch (e) {
@@ -58,8 +69,8 @@ class AuthenticationBloc
     emit(AuthLoadingState());
     try {
       await _authService.signInWithEmail(
-        email: event.email,
-        password: event.password,
+        email: emailController.text,
+        password: passController.text,
       );
       emit(AuthSuccessState());
     } catch (e) {
@@ -95,5 +106,21 @@ class AuthenticationBloc
     } catch (e) {
       emit(AuthErrorState(e.toString()));
     }
+  }
+
+  void _switchAuth(Emitter<AuthenticationState> emit) {
+    emit(AuthLoadingState());
+    isLoginScreen = !isLoginScreen;
+    animationController
+      ..reset()
+      ..forward();
+    emit(SwitchAuthState());
+  }
+
+  @override
+  Future<void> close() {
+    emailController.dispose();
+    passController.dispose();
+    return super.close();
   }
 }

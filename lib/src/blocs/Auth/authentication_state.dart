@@ -38,3 +38,8 @@ class UnAuthenticatedState extends AuthenticationState {
   @override
   List<Object?> get props => [];
 }
+
+class SwitchAuthState extends AuthenticationState {
+  @override
+  List<Object?> get props => [];
+}

@@ -12,6 +12,7 @@ class WelcomeMessage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         AnimatedSize(
           duration: const Duration(seconds: 1),
@@ -25,9 +26,7 @@ class WelcomeMessage extends StatelessWidget {
           title: 'Welcome, Shall We Begin ?',
           headline: true,
         ),
-        SizedBox(
-          height: 6.h,
-        ),
+        SizedBox(height: 6.h),
         MyOutlinedButton(
           func: () {
             AppConstants.showSnackBar(

@@ -77,7 +77,7 @@ class CustomFlexibleSpaceBarState extends State<CustomFlexibleSpaceBar> {
           AppConstants.showSnackBar(
             context: context,
             message: 'Movie Saved Successfully',
-            color: AppColors.green,
+            color: AppColors.primary,
           );
         } else if (state is FavouriteError) {
           AppConstants.showSnackBar(
@@ -151,7 +151,7 @@ class CustomFlexibleSpaceBarState extends State<CustomFlexibleSpaceBar> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 5, vertical: 2),
                       decoration: BoxDecoration(
-                        color: AppColors.green,
+                        color: AppColors.primary,
                         borderRadius: BorderRadius.circular(5),
                       ),
                       child: CustomText(
@@ -242,7 +242,7 @@ class CustomFlexibleSpaceBarState extends State<CustomFlexibleSpaceBar> {
           visible: (_visible ?? false),
           child: const CustomText(
             title: 'Movie Finder',
-            color: AppColors.green,
+            color: AppColors.primary,
           ),
         ),
       ),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:movie_finder/src/data/models/video_model.dart';
 import 'package:sizer/sizer.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../../../core/utils/app_colors.dart';
+import '../../../data/models/video_model.dart';
 
 class TrailerScreen extends StatefulWidget {
   final List<VideoModel> videos;
@@ -52,7 +52,7 @@ class _TrailerScreenState extends State<TrailerScreen> {
             ProgressBar(
               isExpanded: true,
               colors: const ProgressBarColors(
-                playedColor: AppColors.green,
+                playedColor: AppColors.primary,
                 handleColor: Colors.amberAccent,
               ),
             ),
@@ -61,7 +61,7 @@ class _TrailerScreenState extends State<TrailerScreen> {
           ],
           aspectRatio: 16 / 9,
           showVideoProgressIndicator: true,
-          progressIndicatorColor: AppColors.green,
+          progressIndicatorColor: AppColors.primary,
         ),
         builder: (context, player) {
           return SizedBox(height: 100.h, child: player);

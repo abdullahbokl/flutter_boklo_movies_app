@@ -9,25 +9,21 @@ abstract class AuthenticationEvent extends Equatable {
 }
 
 class EmailSignInAuthEvent extends AuthenticationEvent {
-  final String email, password;
-
-  const EmailSignInAuthEvent(this.email, this.password);
+  const EmailSignInAuthEvent();
 
   @override
-  List<Object> get props => [email, password];
+  List<Object> get props => [];
 }
 
 class EmailRegisterAuthEvent extends AuthenticationEvent {
-  final String email, password;
-
-  const EmailRegisterAuthEvent(this.email, this.password);
+  const EmailRegisterAuthEvent();
 
   @override
-  List<Object> get props => [email, password];
+  List<Object> get props => [];
 }
 
-class AnounymousAuthEvent extends AuthenticationEvent {
-  const AnounymousAuthEvent();
+class AnonymousAuthEvent extends AuthenticationEvent {
+  const AnonymousAuthEvent();
 }
 
 class GoogleAuthEvent extends AuthenticationEvent {
@@ -36,4 +32,8 @@ class GoogleAuthEvent extends AuthenticationEvent {
 
 class SignOutEvent extends AuthenticationEvent {
   const SignOutEvent();
+}
+
+class SwitchAuthEvent extends AuthenticationEvent {
+  const SwitchAuthEvent();
 }

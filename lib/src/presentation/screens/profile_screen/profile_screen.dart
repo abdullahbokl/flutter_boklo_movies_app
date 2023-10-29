@@ -53,7 +53,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             CustomButton(
                 func: () {
-                  context.read<AuthenticationBloc>().add(const SignOutEvent());
+                  getIt<AuthenticationBloc>().add(const SignOutEvent());
                 },
                 title: 'Sign Out'),
             SizedBox(

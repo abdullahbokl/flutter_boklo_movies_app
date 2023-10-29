@@ -30,7 +30,7 @@ class ListViewErrorWidget extends StatelessWidget {
             onPressed: func,
             child: const CustomText(
               title: 'try again !',
-              color: AppColors.green,
+              color: AppColors.primary,
               size: 8,
             ),
           ),

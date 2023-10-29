@@ -19,7 +19,7 @@ class SearchMoviesBloc extends Bloc<SearchMovieEvent, SearchMoviesState> {
     on<SearchForMovieEvent>((event, emit) async {
       try {
         emit(SearchLoadingState());
-        movies = await _repo.getSearchedMovie(query: event.query);
+        movies = await _repo.getSearchedMovie(query: searchController.text);
         emit(SearchSuccessState());
       } catch (e) {
         emit(SearchErrorState(message: e.toString()));

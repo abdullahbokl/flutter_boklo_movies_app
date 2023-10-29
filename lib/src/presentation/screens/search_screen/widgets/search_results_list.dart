@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../../data/models/movie_model.dart';
-import 'widgets/search_card.dart';
+import '../../../../data/models/movie_model.dart';
+import 'search_card.dart';
 
 class SearchResultsList extends StatelessWidget {
   const SearchResultsList({Key? key, required this.movies}) : super(key: key);

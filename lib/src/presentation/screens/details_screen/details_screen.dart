@@ -36,7 +36,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
           if (movieState is MovieDetailsLoading) {
             return const Center(
                 child: CircularProgressIndicator(
-              color: AppColors.green,
+              color: AppColors.primary,
             ));
           } else if (movieState is MovieDetailsSuccess) {
             return DetailsScreenBody(movie: movieState.movie);

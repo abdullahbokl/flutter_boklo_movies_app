@@ -4,12 +4,12 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../src/data/models/video_model.dart';
 import '../../src/presentation/screens/auth_screen/auth_screen.dart';
+import '../../src/presentation/screens/auth_screen/login_screen.dart';
 import '../../src/presentation/screens/details_screen/details_screen.dart';
 import '../../src/presentation/screens/home_screen.dart';
-import '../../src/presentation/screens/login_screen/login_screen.dart';
-import '../../src/presentation/screens/screen_layout/screen_layout.dart';
 import '../../src/presentation/screens/trailers_screen/trailer_screen.dart';
 import '../../src/presentation/widgets/custom_text.dart';
+import '../shared/widgets/screen_layout.dart';
 
 class AppRoute {
   static const root = '/';

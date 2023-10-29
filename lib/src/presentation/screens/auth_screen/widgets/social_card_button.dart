@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-class SocialCard extends StatelessWidget {
+class SocialCardButton extends StatelessWidget {
   final String img;
   final void Function() func;
 
-  const SocialCard({Key? key, required this.img, required this.func})
+  const SocialCardButton({Key? key, required this.img, required this.func})
       : super(key: key);
 
   @override

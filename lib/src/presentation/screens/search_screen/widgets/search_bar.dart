@@ -18,7 +18,7 @@ class CustomSearchBar extends StatelessWidget {
       isSufix: true,
       onchange: (query) {
         if (searchBloc.searchController.text.length > 2) {
-          searchBloc.add(SearchForMovieEvent(query: query));
+          searchBloc.add(const SearchForMovieEvent());
         } else if (searchBloc.searchController.text.isEmpty) {
           searchBloc.add(const RemoveSearchedEvent());
         }
@@ -26,7 +26,7 @@ class CustomSearchBar extends StatelessWidget {
       onsubmit: (query) {
         if (searchBloc.searchController.text.isNotEmpty &&
             searchBloc.searchController.text.length <= 2) {
-          searchBloc.add(SearchForMovieEvent(query: query));
+          searchBloc.add(const SearchForMovieEvent());
         }
       },
     );

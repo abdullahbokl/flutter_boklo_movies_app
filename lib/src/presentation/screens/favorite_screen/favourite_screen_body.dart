@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../../../../core/utils/app_assets.dart';
-import '../../../../../core/utils/service_locator.dart';
-import '../../../../blocs/favourite/favourite_bloc.dart';
-import '../../../../data/models/favorite_movie_model.dart';
-import 'favorite_card.dart';
+import '../../../../core/utils/app_assets.dart';
+import '../../../../core/utils/service_locator.dart';
+import '../../../blocs/favourite/favourite_bloc.dart';
+import '../../../data/models/favorite_movie_model.dart';
+import 'widgets/favorite_card.dart';
 
 class FavouriteScreenBody extends StatelessWidget {
   const FavouriteScreenBody({Key? key}) : super(key: key);

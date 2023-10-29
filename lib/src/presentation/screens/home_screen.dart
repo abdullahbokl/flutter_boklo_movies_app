@@ -43,7 +43,7 @@ class _BaseScreenState extends State<BaseScreen> {
             opacity: 0.7,
             child: BottomNavigationBar(
               type: BottomNavigationBarType.fixed,
-              selectedItemColor: AppColors.green,
+              selectedItemColor: AppColors.primary,
               showUnselectedLabels: false,
               unselectedItemColor: Colors.grey,
               backgroundColor: Colors.transparent,

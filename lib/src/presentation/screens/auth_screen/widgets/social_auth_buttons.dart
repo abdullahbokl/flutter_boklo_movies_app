@@ -3,16 +3,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../../../core/utils/app_assets.dart';
+import '../../../../../core/utils/service_locator.dart';
 import '../../../../blocs/Auth/authentication_bloc.dart';
 import '../../../widgets/custom_indicator.dart';
 import 'outlined_button.dart';
 
-class SocialLoginButtons extends StatelessWidget {
-  const SocialLoginButtons({Key? key}) : super(key: key);
+class SocialAuthButtons extends StatelessWidget {
+  const SocialAuthButtons({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final AuthenticationBloc authBloc = context.read<AuthenticationBloc>();
+    final authBloc = getIt<AuthenticationBloc>();
     return Column(
       children: [
         BlocBuilder<AuthenticationBloc, AuthenticationState>(
@@ -37,7 +38,7 @@ class SocialLoginButtons extends StatelessWidget {
           } else {
             return MyOutlinedButton(
               func: () {
-                authBloc.add(const AnounymousAuthEvent());
+                authBloc.add(const AnonymousAuthEvent());
               },
               title: 'Continue Anonymously',
               img: AppAssets.anonymous,

@@ -79,7 +79,7 @@ class CarouselItem extends StatelessWidget {
                           height: 4.h,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: AppColors.green,
+                              backgroundColor: AppColors.primary,
                             ),
                             onPressed: onTap,
                             child: const CustomText(

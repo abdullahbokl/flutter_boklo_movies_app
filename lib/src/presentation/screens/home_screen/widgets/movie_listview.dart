@@ -40,7 +40,7 @@ class MoviesListView extends StatelessWidget {
                 height: 30,
                 width: 30,
                 child: Center(
-                  child: CircularProgressIndicator(color: AppColors.green),
+                  child: CircularProgressIndicator(color: AppColors.primary),
                 ),
               ),
             );
