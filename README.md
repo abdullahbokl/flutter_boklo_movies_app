@@ -13,7 +13,7 @@ An App based on **theMovieApi and supabase backend** to browse all the details a
 - Saving favorite movies.
 - Watching Trailers.
 
-## ??️ Video Demo :
+## 📽️ [![Video Demo](https://drive.google.com/file/d/1_R_MMdDGMNrdBBIrez1SZbwAGv5Q0c9z/view?usp=sharing)](https://drive.google.com/file/d/1_R_MMdDGMNrdBBIrez1SZbwAGv5Q0c9z/view?usp=sharing)
 
 ## 📸 Screenshots :
 
